@@ -2,6 +2,10 @@ import Profile from './components/Profile/Profile';
 import user from './user.json';
 import Statistics from './components/Statistics/Statistics';
 import statisticalData from './statistical-data.json';
+import FriendList from './components/FriendList/Friendlist';
+import friends from './friend-list.json';
+import TransactionHistory from './components/TransactionHistory/TransactionHistory';
+import transactions from './transactions.json';
 
 export default function App() {
   return (
@@ -15,7 +19,10 @@ export default function App() {
         views={user.stats.views}
         likes={user.stats.likes}
       />
-      <Statistics stats={statisticalData} />;
+      ,
+      <Statistics stats={statisticalData} />,
+      <FriendList friends={friends} />,
+      <TransactionHistory items={transactions} />;
     </div>
   );
 }

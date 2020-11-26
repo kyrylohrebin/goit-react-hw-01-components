@@ -1,4 +1,4 @@
-import PropTypes, { number, string } from 'prop-types';
+import PropTypes from 'prop-types';
 import StatisticsList from './StatisticsList';
 
 const Statistics = ({ stats }) => {
@@ -12,12 +12,12 @@ const Statistics = ({ stats }) => {
 
 Statistics.propTypes = {
   stats: PropTypes.arrayOf(
-    PropTypes.exact({
-      id: string.isRequired,
-      label: string.isRequired,
-      percentage: number.isRequired,
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
     }),
-  ).isRequired,
+  ),
 };
 
 export default Statistics;
