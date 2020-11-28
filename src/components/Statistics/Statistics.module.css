@@ -1,0 +1,11 @@
+.statistics {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 30px 0;
+}
+
+.title {
+  text-align: center;
+  margin: 0;
+  padding: 20px 0;
+}

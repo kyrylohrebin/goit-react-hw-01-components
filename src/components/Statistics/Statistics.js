@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import StatisticsList from './StatisticsList';
+import styles from './Statistics.module.css';
 
 const Statistics = ({ stats }) => {
   return (
-    <section>
-      <h2>Upload stats</h2>
+    <section className={styles.statistics}>
+      <h2 className={styles.title}>Upload stats</h2>
       <StatisticsList items={stats} />
     </section>
   );

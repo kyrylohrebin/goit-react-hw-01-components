@@ -1,10 +1,12 @@
+import styles from './StatisticsList.module.css';
+
 const StatisticsList = ({ items }) => {
   return (
-    <ul>
+    <ul className={styles.statistics_list}>
       {items.map(item => (
-        <li key={item.id}>
-          <span>{item.label}</span>
-          <span>{`${item.percentage}%`}</span>
+        <li className={`${styles.item} ${styles.id1}`} key={item.id}>
+          <span className={styles.label}>{item.label}</span>
+          <span className={styles.percentage}>{`${item.percentage}%`}</span>
         </li>
       ))}
     </ul>

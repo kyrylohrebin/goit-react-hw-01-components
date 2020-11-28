@@ -7,9 +7,11 @@ import friends from './friend-list.json';
 import TransactionHistory from './components/TransactionHistory/TransactionHistory';
 import transactions from './transactions.json';
 
+/* import './App.css'; */
+
 export default function App() {
   return (
-    <div>
+    <div className="container">
       <Profile
         name={user.name}
         tag={user.tag}
@@ -19,9 +21,8 @@ export default function App() {
         views={user.stats.views}
         likes={user.stats.likes}
       />
-      ,
-      <Statistics stats={statisticalData} />,
-      <FriendList friends={friends} />,
+      <Statistics stats={statisticalData} />
+      <FriendList friends={friends} />
       <TransactionHistory items={transactions} />;
     </div>
   );
